@@ -1,0 +1,11 @@
+.headerNav {
+    position: relative;
+    padding: 10px 20px;
+}
+
+.headerNav * {
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,12 @@
+.previewImage {
+    float: left;
+    width: 300px;
+    min-width: 320px;
+    min-height: 200px;
+    margin-right: 20px;
+}
+
+.content {
+    display:flex;
+    flex-direction: row;
+}

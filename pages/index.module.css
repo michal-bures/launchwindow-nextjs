@@ -1,0 +1,11 @@
+.launchDate {
+    font-size: 1.5em;
+    float: left;
+    padding: 0.5em;
+    padding-left: 1em;
+    width: 150px;
+}
+
+.launchDetails {
+    padding: 0.5em;
+}

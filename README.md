@@ -8,14 +8,14 @@ This simple web application showcases the various React component rendering appr
 
 ![screnshot](doc/screen1.png)
 
-The index pages shows the next five upcoming rocket launches worldwide using the excellent free [Launch Library API](https://launchlibrary.net/docs/1.4/api.html), with an option to fetch more.
+The index page shows the next five upcoming rocket launches worldwide using the excellent free [Launch Library API](https://launchlibrary.net/docs/1.4/api.html), with a button to fetch more.
 
-The page is rendered on server with each request - the HTML page fetched from server already contains all the content and is easily processable by web indexers.
-The react components are hydrated afterwards, which allows the "See More" button to work the usual React way - by updating component state based on AJAX call results. 
+The page is rendered on server with each request. The HTML page received by browser already contains all the content and is easily parsable by search engines.
+The react components are hydrated afterwards, which allows the "See More" button to work exactly as it would work in a regular React SPA. 
 
 How it works:
 * The `getServerSideProps` method in [index.tsx](pages/index.tsx) tells Next.js how it should populate the props of the `Home` component on each request. This also tells Next.js that we want to use server-side rendering for this page. 
-* The `Home` component itself stores the inital props into it's own state and can update this state based on user actions as is usual in React.
+* The `Home` component itself stores the inital props into it's own state and can update this state based on user actions the normal React way.
 * The `fetchUpcomingLaunches` method for getting the data is used both server-side in `getServerSideProps` and client-side in the `fetchMore` function.  
 
 ## The rocket detail page - Static pre-rendered pages
